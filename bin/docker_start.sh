@@ -21,8 +21,8 @@ if [ $RET -gt 0 ]; then
   bin/rails db:seed
 fi
 
-echo "================= Seeding the Database =================="
-bin/rails db:seed
+#echo "================= Seeding the Database =================="
+#bin/rails db:seed
 echo "================= Removing the old server PID =================="
 rm -f tmp/pids/server.pid
 echo "================= Stating the web server =================="
