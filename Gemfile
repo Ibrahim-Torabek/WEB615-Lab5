@@ -35,8 +35,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'bootstrap_form'
+gem 'bootstrap-sass'
 gem 'pg', '~> 0.21'
+gem 'will_paginate', '~> 3.1.1'
+gem 'faker'
+gem 'rubocop-faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

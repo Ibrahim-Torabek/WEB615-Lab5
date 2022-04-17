@@ -1,19 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @comment.message %>
-</p>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <strong>Message:</strong>
+        <%= @comment.message %>
+      </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @comment.user %>
-</p>
+      <div class="panel-body">
 
-<p>
-  <strong>Article:</strong>
-  <%= @comment.article %>
-</p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+        <p>
+          <strong>User:</strong>
+          <%= link_to @comment.user.name, user_path(@comment.user) %>
+        </p>
+        <p>
+          <strong>Article:</strong>
+          <%= link_to @comment.article.title, articles_path(@comment.article) %>
+        </p>
+
+
+      </div>
+
+      <div class="panel-footer">
+        <%= link_to 'Edit', edit_comment_path(@comment) %> |
+        <%= link_to 'Back', comments_path %>
+      </div>
+    </div>
+  </div>
+</div>
